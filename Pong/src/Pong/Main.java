@@ -33,7 +33,7 @@ public class Main extends Application {
 		root.getChildren().add(left);
 		left.setTranslateX(40);
 		left.setTranslateY(210);
-		
+
 		// skapar bollen
 		ball boll = new ball();
 		root.getChildren().add(boll);
@@ -50,7 +50,8 @@ public class Main extends Application {
 			@Override
 			public void handle(long now) {
 
-				// hanterar input (alltså racketen eftersom de är de som kontrolleras av användaren)
+				// hanterar input (alltså racketen eftersom de är de som kontrolleras av
+				// användaren)
 				for (KeyCode key : keysPressed) {
 
 					switch (key) {
@@ -74,7 +75,6 @@ public class Main extends Application {
 					}
 
 				}
-
 
 			}
 		};
