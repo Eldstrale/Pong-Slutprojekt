@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-	// anv�nds f�r att f� smooth input (jaok l�rde oss detta)
+	// anv�nds f�r att f� mer "smooth" input (jaok l�rde oss detta)
 	ArrayList<KeyCode> keysPressed = new ArrayList<KeyCode>();
 
 	public void start(Stage primaryStage) throws Exception {
@@ -33,7 +33,7 @@ public class Main extends Application {
 		root.getChildren().add(left);
 		left.setTranslateX(40);
 		left.setTranslateY(210);
-
+		
 		// skapar bollen
 		ball boll = new ball();
 		root.getChildren().add(boll);
