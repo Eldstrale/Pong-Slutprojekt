@@ -32,7 +32,7 @@ public class ball extends Circle {
 		ydirr();
 	}
 
-	// flyttar kulan enligt.
+	// bestämmer hur kulan flyttas (jag fick lite hjälp av August med detta)
 	public void move() {
 		setTranslateX(getTranslateX() - Math.cos(Math.toRadians(angle)) * 8 * dirrX);
 		setTranslateY(getTranslateY() - Math.sin(Math.toRadians(angle)) * 8 * dirrY);
