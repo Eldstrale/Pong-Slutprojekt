@@ -6,7 +6,7 @@ import javafx.geometry.Bounds;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-//kulan som passas mellan racketen
+// kulan som passas mellan racketen
 public class ball extends Circle {
 
 	// styr i vilken riktning kulan ska r�ra sig
