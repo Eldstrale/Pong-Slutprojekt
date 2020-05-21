@@ -1,6 +1,7 @@
 package Pong;
 
-//Mainklassens syfte �r prim�rt att lagra de olika objekten och knyta dem samman f�r att f� spelet att fungera.
+// Mainklassens syfte är primärt att lagra de olika objekten och knyta dem samman för att 
+// få spelet att fungera.
 
 import java.util.ArrayList;
 
@@ -14,7 +15,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-	// anv�nds f�r att f� mer "smooth" input (jaok l�rde oss detta)
+	// används för att få mer "smooth" input (jaok lärde oss detta)
 	ArrayList<KeyCode> keysPressed = new ArrayList<KeyCode>();
 
 	public void start(Stage primaryStage) throws Exception {
@@ -23,7 +24,7 @@ public class Main extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 
-		// skapar ett h�ger- och v�nster-racket samt placerar dem p� r�tt plats
+		// skapar ett höger- och vänster-racket samt placerar dem på rätt plats
 		paddle right = new paddle();
 		root.getChildren().add(right);
 		right.setTranslateX(760);
@@ -38,19 +39,19 @@ public class Main extends Application {
 		ball boll = new ball();
 		root.getChildren().add(boll);
 
-		// skapar po�ngm�taren och placerar den på rätt plats
+		// skapar poängmätaren och placerar den på rätt plats
 		scoreboard score = new scoreboard();
 		root.getChildren().add(score);
 		score.setTranslateX(400);
 		score.setTranslateY(50);
 
-		// animationstimer, fungerar ungefär som en while loop f�r javafx
+		// animationstimer, fungerar ungefär som en while loop för javafx
 		AnimationTimer at = new AnimationTimer() {
 
 			@Override
 			public void handle(long now) {
 
-				// hanterar input (alltså racketen eftersom de är de som kontrolleras av
+				// hanterar input (alltså racketen eftersom det är de som kontrolleras av
 				// användaren)
 				for (KeyCode key : keysPressed) {
 
@@ -74,6 +75,18 @@ public class Main extends Application {
 						break;
 					}
 
+				}
+
+				// aktiverar metoder
+				boll.move();
+				boll.bounce(left.getBoundsInParent(), right.getBoundsInParent());
+
+				// kollar om bollen gått i mål och lägger till poäng
+				if (boll.leftgoal()) {
+					score.addleft();
+				}
+				if (boll.rightgoal()) {
+					score.addright();
 				}
 
 			}
