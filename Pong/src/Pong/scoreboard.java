@@ -7,7 +7,7 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
-//scoreboard är en poängmätare som håller koll på varje spelares poäng samt visar dem på varera sida.
+// scoreboard är en poängmätare som håller koll på varje spelares poäng samt visar dem på varera sida.
 
 public class scoreboard extends Group {
 
