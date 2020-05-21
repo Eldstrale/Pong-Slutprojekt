@@ -3,7 +3,7 @@ package Pong;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-//skapar en kvadrat, alltså racketen
+// skapar en kvadrat, alltså racketen
 public class paddle extends Rectangle {
 
 	public paddle() {
@@ -13,7 +13,7 @@ public class paddle extends Rectangle {
 
 	}
 
-	// flyttar racketen upp�t tills de börjar l�mna rutan
+	// flyttar racketen uppåt tills de börjar lämna rutan
 	public void up() {
 		if (!getBoundsInParent().intersects(0, 0, 800, 0)) {
 			setTranslateY(getTranslateY() - 5);
@@ -21,7 +21,7 @@ public class paddle extends Rectangle {
 
 	}
 
-	// flyttar racketen ner�t tills de börjar l�mna rutan
+	// flyttar racketen neråt tills de börjar lämna rutan
 	public void down() {
 		if (!getBoundsInParent().intersects(0, 500, 800, 0)) {
 			setTranslateY(getTranslateY() + 5);

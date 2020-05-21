@@ -9,7 +9,7 @@ import javafx.scene.shape.Circle;
 // kulan som passas mellan racketen
 public class ball extends Circle {
 
-	// styr i vilken riktning kulan ska r�ra sig
+	// styr i vilken riktning kulan ska röra sig
 	int dirrX = 1;
 	int dirrY = 1;
 	double angle = 30;
